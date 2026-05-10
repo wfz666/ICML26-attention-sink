@@ -199,7 +199,7 @@ This work was supported by DOE ASCR (Award DE-SC0022873), the National Institute
 
 ## Contact
 
-- Fangzheng Wu (corresponding author) — <fwu66666666@gmail.com>
+- Fangzheng Wu (corresponding author) — <fwu6@tulane.edu> <fwu66666666@gmail.com>
 - Brian Summa — <bsumma@tulane.edu>
 
 For bug reports and reproduction questions, please open an issue on [GitHub](https://github.com/wfz666/ICML26-attention-sink/issues).
