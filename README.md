@@ -5,7 +5,7 @@ Code release accompanying the ICML 2026 paper.
 
 📄 [Paper](https://openreview.net/forum?id=QwE8cOtclR) | 🔗 [arXiv](https://arxiv.org/abs/XXXX.XXXXX) | 💻 [Code](https://github.com/wfz666/ICML26-attention-sink)
 
-![](assets/teaser.png)
+![](attention-sink-voodoo-release/assets/teaser.png)
 
 We test whether **attention sinks**—dominant high-mass attention recipients—are functionally necessary for semantic alignment in text-to-image diffusion transformers. Across 553 GenEval prompts on Stable Diffusion 3 (with SDXL corroboration), suppressing dynamically identified sinks **does not degrade alignment** (CLIP-T, ImageReward, HPS-v2) at standard intervention budgets, yet induces sink-specific perceptual shifts **~6× larger than equal-budget random masking**, revealing an empirical dissociation between trajectory-level perturbation and alignment-level robustness.
 
@@ -13,7 +13,7 @@ We test whether **attention sinks**—dominant high-mass attention recipients—
 
 ### 1. Sink-specific perceptual dissociation
 
-![](assets/qualitative_k1.png)
+![](attention-sink-voodoo-release/assets/qualitative_k1.png)
 
 *Each row: baseline (left), sink-removed (middle), equal-budget random-removed (right). Sink masking induces consistent layout / style restructuring while preserving the prompted concept; random masking stays close to baseline.*
 
@@ -46,7 +46,7 @@ bash scripts/run_geneval_experiments.sh   # ≈6 hours, 3× A6000
 
 ### 3. Sink dynamics across layers and timesteps
 
-![](assets/h1_dynamics.png)
+![](attention-sink-voodoo-release/assets/h1_dynamics.png)
 
 *Maximum incoming mass, attention entropy, top-5 concentration, and maximum activation across denoising timesteps for layers 6, 12, 18 in SD3.*
 
