@@ -1,2 +1,2 @@
 # ICML26-attention-sink
-Are attention sinks necessary in diffusion transformers? Code for dynamic sink detection and causal suppression experiments in SD3/SDXL.
+High attention mass ≠ functional necessity: causal tests of dynamic attention sinks in diffusion transformers (SD3, SDXL). ICML 2026.
