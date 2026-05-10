@@ -118,7 +118,7 @@ Every shell driver in `scripts/` checks `HF_TOKEN` is set and aborts otherwise. 
 - `prompts/generation_prompts.txt` — 553 GenEval prompts (paper main result).
 - `prompts/prompts_geneval_balanced_100.txt` — 100-prompt balanced subset for k-sweep, HPS-v2 validation, and FID calibration.
 
-## Quickstart (single A6000)
+## Quickstart
 
 A small smoke test exercising the main intervention pipeline on 32 prompts at the paper's `top_k=1, layer=12` configuration:
 
