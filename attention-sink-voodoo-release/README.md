@@ -2,9 +2,7 @@
 
 Code release accompanying the ICML 2026 paper.
 
-📄 [Paper](https://openreview.net/forum?id=QwE8cOtclR) | 
-🔗 [arXiv](https://arxiv.org/abs/XXXX.XXXXX) | 
-💻 [Code](https://github.com/wfz666/ICML26-attention-sink)
+📄 [Paper](https://openreview.net/forum?id=QwE8cOtclR) | 🔗 [arXiv](https://arxiv.org/abs/XXXX.XXXXX) | 💻 [Code](https://github.com/wfz666/ICML26-attention-sink)
 
 ## Abstract
 
@@ -125,6 +123,19 @@ reports paired-CLIP statistics, and writes `results_quickstart/clip_stats.json`.
 > `--prompts_file` / `--num_prompts` form — always check the script's
 > argparse if in doubt.
 
+## Main results
+
+The paper's headline findings can be reproduced as:
+
+| Finding | Tables | Command |
+|---|---|---|
+| Non-necessity for alignment | Table 2 | `bash scripts/run_geneval_experiments.sh` |
+| SDXL cross-architecture | Table 5 | `python experiments/sdxl_sink_experiment.py ...` |
+| Sink-specific perceptual dissociation (~6×) | Tables 6, 7 | `python experiments/run_perceptual_delta_delta.py ...` |
+| Metric-dependent boundary at k≥10 | Tables 19, 20 | `bash scripts/run_k_sweep.sh` |
+
+For appendix experiments and full table-by-table recipes, see "Full reproduction" below.
+
 ## Full reproduction of paper experiments
 
 The headline result (Table 2 — Dynamic sink intervention, *N*=553) is
@@ -161,16 +172,10 @@ python figures/make_consolidated_fig.py \
 
 Convenience wrapper: `bash scripts/plot.sh`.
 
-### Figure 1 — Conceptual teaser (`fig:teaser`)
-
-<!-- TODO map to script -->
-
 ### Table 1 — Attention concentration statistics (`tab:h1_stats`)
 
 Aggregated from `results_h1_dynamic/h1_dynamic_metrics.csv` produced by
 `experiments/collect_h1_dynamic.py`.
-
-<!-- TODO map to script -->
 
 ### Table 2 — Dynamic sink intervention main result (`tab:dynamic_sink`)
 
@@ -247,11 +252,6 @@ python experiments/run_perceptual_delta_delta.py \
     --compute_hps
 ```
 
-### Table 8 — Summary of experimental findings (`tab:summary`)
-
-This is a summary table synthesised from the other results — no dedicated
-script.
-
 ### Table 9 — FID calibration baselines, short table (`tab:fid_context`)
 ### Table 18 — FID calibration baselines, full N=100 (`tab:fid_calibration`)
 
@@ -281,14 +281,6 @@ python eval/eval_imagereward.py results_full_TIMESTAMP/sweep_score/sweep_sd3 sco
 ### Figure (Appendix) — Intervention verification (`fig:verification_appendix`)
 
 Produced by `experiments/verify_intervention.py` (see Table 4 above).
-
-### Figure (Appendix) — Summary heatmap (`fig:summary_heatmap`)
-
-<!-- TODO map to script -->
-
-### Figure (Appendix) — Robustness analysis (`fig:robustness_appendix`)
-
-<!-- TODO map to script -->
 
 ### Table 12 — Multi-layer intervention (`tab:multilayer_appendix`)
 
