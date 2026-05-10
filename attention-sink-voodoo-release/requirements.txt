@@ -1,0 +1,31 @@
+# Core deep learning stack (tested on torch 2.x)
+torch>=2.0
+torchvision>=0.15
+
+# Diffusion + transformer models
+diffusers>=0.27
+transformers>=4.40
+
+# Numerical / data
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+
+# Imaging
+Pillow>=10.0
+
+# Plotting
+matplotlib>=3.7
+
+# Progress bars
+tqdm>=4.65
+
+# ----------------------------------------------------------------------
+# Optional evaluation backends — install per-experiment as needed.
+# Uncomment any of the following you want available:
+#
+# hpsv2>=1.0           # for eval/run_hpsv2_eval.py and experiments/hps_v2_k50_validation.py
+# image-reward>=1.5    # for eval/compute_imagereward.py and eval/eval_imagereward.py
+# lpips>=0.1.4         # for experiments/run_perceptual_delta_delta.py
+# pytorch_fid>=0.3.0   # for scripts/FID_calibration.sh
+# ----------------------------------------------------------------------
