@@ -71,13 +71,13 @@ CLIP-T remains stable across all tested masking budgets (k ∈ {1, 5, 10, 20, 50
 | k=10  | n.s. (CI ∋ 0) | -0.005 (95% CI [-0.008, -0.001]) | sink-specific (p=0.007) |
 | k=50  | n.s. (CI ∋ 0) | -0.020 (95% CI [-0.026, -0.013]) | sink-specific (p<10⁻⁴) |
 
-Reproduce: `bash scripts/run_k_sweep.sh` for CLIP-T sweep; HPS-v2 sweep recipe in [REPRODUCE.md](REPRODUCE.md).
+Reproduce: `bash scripts/run_k_sweep.sh` for CLIP-T sweep; HPS-v2 sweep recipe in [REPRODUCE.md](attention-sink-voodoo-release/REPRODUCE.md).
 
 ### 5. Cross-architecture validation (SDXL)
 
 The non-necessity finding holds in SDXL across **both** cross-attention (text→image conditioning) and self-attention (image→image) variants. SDXL cross-attention shows smaller perceptual shifts (LPIPS ≈ 0.06) than SD3 joint attention (LPIPS ≈ 0.16), consistent with the architectural difference in text–image coupling.
 
-Reproduce: see [REPRODUCE.md § SDXL](REPRODUCE.md#sdxl-cross-architecture).
+Reproduce: see [REPRODUCE.md § SDXL](attention-sink-voodoo-release/REPRODUCE.md#sdxl-cross-architecture).
 
 ## Setup
 
