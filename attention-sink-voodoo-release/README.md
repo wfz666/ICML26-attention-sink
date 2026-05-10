@@ -2,7 +2,9 @@
 
 Code release accompanying the ICML 2026 paper.
 
-📄 [Paper](LINK_PLACEHOLDER) | 🔗 [arXiv](LINK_PLACEHOLDER) | 📚 [Project page](LINK_PLACEHOLDER) | 🐙 [GitHub](https://github.com/wfz666/ICML26-attention-sink)
+📄 [Paper](https://openreview.net/forum?id=QwE8cOtclR) | 
+🔗 [arXiv](https://arxiv.org/abs/XXXX.XXXXX) | 
+💻 [Code](https://github.com/wfz666/ICML26-attention-sink)
 
 ## Abstract
 
